@@ -1,0 +1,27 @@
+body {
+    width: 90%;
+    margin: auto;
+    background-color: lightgrey;
+}
+
+#gifs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.gifdiv {
+    justify-self: center;
+    text-align: center;
+}
+
+p {
+    font-family: fantasy;
+    font-size: 22px;
+    color: gold
+}
+
+img {
+    height: 150px;
+}
