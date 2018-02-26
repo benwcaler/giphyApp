@@ -1,14 +1,64 @@
 body {
     width: 90%;
     margin: auto;
-    background-color: hotpink;
+    background-color: black;
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-family: fantasy;
+    color: gold;
+    
+}
+
+#heading {
+    margin: 30px;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 5px 5px 20px black;
 }
 
 #gifs {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-gap: 10px;
+}
+
+#search {
+    text-align: center;
+    display: block;
+    margin: 15px;
+}
+
+#srch {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+#term {
+    background-color: midnightblue;
+    color: gold;
+    border-color: black;
+    height: 25px;
+    width: 200px;
+    font-size: 14px;
+    margin: 10px;
+}
+
+#error {
+    color: red;
+}
+
+#searchbtn {
+    margin: 10px;
+}
+
+#click {
+    margin: 15px;
+    display: block;
+    text-align: center;
 }
 
 .gifdiv {
@@ -17,11 +67,46 @@ body {
 }
 
 p {
-    font-family: fantasy;
     font-size: 22px;
-    color: gold
 }
 
 img {
     height: 150px;
+}
+
+button, #searchbtn {
+    background-color: dimgrey;
+    color: gold;
+    font-size: 14px;
+    font-family: fantasy;
+    padding: 5px;
+    margin: 5px;
+    text-justify: center;
+    text-align: center;
+    border-radius: 5px;
+    border-color: #666;
+    border-width: 2px;
+    box-shadow: 3px 3px 10px black;
+}
+
+button:hover, #searchbtn:hover {
+    border: 2px solid gold;
+    border-radius: 5px;
+
+}
+
+button:focus, #searchbtn:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 1100px) {
+    #gifs {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #gifs {
+        grid-template-columns: 1fr;
+    }
 }

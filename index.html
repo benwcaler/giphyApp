@@ -13,15 +13,20 @@
 </head>
 
 <body>
+    <div id="heading">The Harry Potter gif Machine</div>
+    <hr>
     <div id="container">
-        <div id="click"></div>
         <form>
             <span id="search">
-                Add a gif button
-                <input id="term" type="text">
-                <input id="searchbtn" value="Add button" type="submit">
+                <span id="srch">Add a character</span><br>
+                <input id="term" type="text"><br>
+                <span id="error"></span>
+                <br>
+                <input id="searchbtn" value="Submit" type="submit">
             </span>
         </form>
+        <div id="click"></div>
+        <hr>
         <div id="gifs"></div>
         <audio src="assets/horn.mp3" id="horn"></audio>
     </div>

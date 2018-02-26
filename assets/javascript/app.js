@@ -51,11 +51,18 @@ window.onload = function () {
         }
     })
     //add button function
-    $("#searchbtn").on("click", function(event) {
+    $("#searchbtn").on("click", function (event) {
         event.preventDefault();
-        $("#horn")[0].play();
-        topics.push($("#term").val())
-        $("#term").val("")
-        btnLoad()
+        $("#error").empty();
+        if ($("#term").val() === "") {
+            $("#error").text("Please enter a search term");
+        } else if (topics.indexOf($("#term").val()) > -1) {
+            $("#error").text("Already a button");
+        } else {
+            $("#horn")[0].play();
+            topics.push($("#term").val())
+            $("#term").val("")
+            btnLoad()
+        }
     });
 }
