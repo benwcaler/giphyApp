@@ -1,15 +1,17 @@
-body {
-    width: 90%;
-    margin: auto;
+html {
     background-color: black;
     background-image: url("../images/bg.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-position: center; 
+}
+
+body {
+    width: 90%;
+    margin: auto;
     font-family: fantasy;
     color: gold;
-    
 }
 
 #heading {
