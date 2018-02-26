@@ -4,7 +4,6 @@ window.onload = function () {
     //api calls
     $(document).on("click", "#btn", function () {
         $("#gifs").empty();
-        $("#horn")[0].play();
         var sTerm = $(this).val();
         var queryUrl = "https://api.giphy.com/v1/gifs/search?api_key=B2biiO4oVNMtT2qJ2fAMgpgB5RgiuvS1&q=" + sTerm + "&limit=10&offset=0&rating=PG&lang=en";
         $.ajax({
@@ -41,7 +40,6 @@ window.onload = function () {
     //animate images
     $(document).on("click", ".gif", function () {
         var state = $(this).attr("data-state");
-        $("#horn")[0].play();
         if (state === "still") {
             $(this).attr("src", $(this).attr("data-animate"));
             $(this).attr("data-state", "animate")
@@ -59,7 +57,6 @@ window.onload = function () {
         } else if (topics.indexOf($("#term").val()) > -1) {
             $("#error").text("Already a button");
         } else {
-            $("#horn")[0].play();
             topics.push($("#term").val())
             $("#term").val("")
             btnLoad()
