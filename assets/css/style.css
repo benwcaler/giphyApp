@@ -1,6 +1,6 @@
 html {
     background-color: black;
-    background-image: url("assets/images/bg.jpg");
+    background-image: url("../Images/bg.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
