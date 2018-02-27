@@ -52,9 +52,15 @@ window.onload = function () {
     $("#searchbtn").on("click", function (event) {
         event.preventDefault();
         $("#error").empty();
+        var dup;
+        for (var i = 0; i < topics.length; i++) {
+            if (topics[i].toLowerCase() === $("#term").val().toLowerCase()) {
+                dup = topics[i].toLowerCase()
+            }
+        }
         if ($("#term").val() === "") {
             $("#error").text("Please enter a search term");
-        } else if (topics.indexOf($("#term").val()) > -1) {
+        } else if ($("#term").val().toLowerCase() === dup) {
             $("#error").text("Already a button");
         } else {
             topics.push($("#term").val())
