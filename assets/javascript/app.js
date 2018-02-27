@@ -62,10 +62,11 @@ window.onload = function () {
             $("#error").text("Please enter a search term");
         } else if ($("#term").val().toLowerCase() === dup) {
             $("#error").text("Already a button");
+        } else if (topics[i].toLowerCase().includes($("#term").val().toLowerCase())) {
         } else {
             topics.push($("#term").val())
-            $("#term").val("")
             btnLoad()
         }
+        $("#term").val("")
     });
 }
