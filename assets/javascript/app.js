@@ -53,20 +53,20 @@ window.onload = function () {
         event.preventDefault();
         $("#error").empty();
         var dup;
+        var dup2;
         for (var i = 0; i < topics.length; i++) {
-            if (topics[i].toLowerCase() === $("#term").val().toLowerCase()) {
-                dup = topics[i].toLowerCase()
+            if (topics[i].toLowerCase().includes($("#term").val().toLowerCase())) {
+                $("#error").text("Already a button");
+                dup = topics[i].toLowerCase();
+                dup2 = $("#term").val().toLowerCase()
             }
         }
         if ($("#term").val() === "") {
             $("#error").text("Please enter a search term");
-        } else if ($("#term").val().toLowerCase() === dup) {
-            $("#error").text("Already a button");
-        } else if (topics[i].toLowerCase().includes($("#term").val().toLowerCase())) {
-        } else {
+        } else if (dup !== $("#term").val().toLowerCase() && dup2 !== $("#term").val().toLowerCase()) {
             topics.push($("#term").val())
             btnLoad()
         }
         $("#term").val("")
-    });
+    })
 }
